@@ -1,438 +1,530 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Block 3.7 Section B — MCQ Answers with Whys & Hows</title>
-  <style>
-    :root{
-      --bg:#f5f7fb;
-      --card:#ffffff;
-      --text:#172033;
-      --muted:#60708a;
-      --accent:#0b66c3;
-      --good:#0a7f46;
-      --warn:#a86100;
-      --border:#dce4ef;
-      --soft:#eef5ff;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,Segoe UI,Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.65;
-    }
-    .container{
-      width:min(1100px,94%);
-      margin:0 auto;
-      padding:40px 0 80px;
-    }
-    .hero{
-      background:linear-gradient(135deg,#0f3d75,#0b66c3);
-      color:white;
-      padding:34px;
-      border-radius:22px;
-      margin-bottom:28px;
-      box-shadow:0 12px 30px rgba(0,0,0,.12);
-    }
-    h1{margin:0 0 8px;font-size:clamp(28px,4vw,44px);line-height:1.1}
-    .subtitle{opacity:.92;font-size:17px}
-    .section-title{
-      margin:36px 0 16px;
-      padding:14px 18px;
-      background:#102a43;
-      color:#fff;
-      border-radius:14px;
-      font-size:22px;
-    }
-    .q{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:22px;
-      margin:16px 0;
-      box-shadow:0 4px 12px rgba(20,40,80,.05);
-    }
-    .q h3{margin:0 0 10px;font-size:20px}
-    .answer{
-      display:inline-block;
-      padding:7px 11px;
-      border-radius:999px;
-      background:#e9f8f0;
-      color:var(--good);
-      font-weight:800;
-      margin:4px 0 10px;
-    }
-    .why{
-      background:var(--soft);
-      border-left:4px solid var(--accent);
-      padding:12px 14px;
-      border-radius:10px;
-      margin-top:10px;
-    }
-    .flow{
-      font-weight:700;
-      text-align:center;
-      padding:12px;
-      background:#f8fafc;
-      border:1px dashed #b6c4d6;
-      border-radius:10px;
-      margin:12px 0;
-    }
-    .warning{
-      color:var(--warn);
-      font-weight:700;
-    }
-    .answer-key{
-      background:#101827;
-      color:#f8fafc;
-      border-radius:18px;
-      padding:24px;
-      margin-top:30px;
-    }
-    .answer-key pre{
-      white-space:pre-wrap;
-      font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
-      font-size:15px;
-      margin:0;
-    }
-    .high-yield{
-      display:grid;
-      gap:12px;
-      margin-top:22px;
-    }
-    .tip{
-      background:#fff8e8;
-      border:1px solid #f0d697;
-      padding:14px 16px;
-      border-radius:12px;
-    }
-    .small{color:var(--muted);font-size:14px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Block 3.7 Section B — Full Questions, Answers & Explanations</title>
+<style>
+:root{--bg:#fff;--text:#202123;--muted:#6b7280;--line:#e5e7eb;--soft:#f7f7f8;--green:#10a37f;--greenSoft:#ecfdf5;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6}
+.wrap{max-width:920px;margin:auto;padding:40px 20px 90px}
+header{padding:18px 0 28px;border-bottom:1px solid var(--line);margin-bottom:22px}
+h1{font-size:32px;line-height:1.2;margin:0 0 10px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:15px}
+.note{margin-top:16px;padding:13px 15px;border:1px solid var(--line);background:var(--soft);border-radius:12px;font-size:14px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 34px}
+nav a{text-decoration:none;color:var(--text);border:1px solid var(--line);padding:7px 10px;border-radius:999px;font-size:13px;background:white}
+section{margin:42px 0}
+h2{font-size:23px;letter-spacing:-.015em;margin:0 0 16px}
+.qcard{border-top:1px solid var(--line);padding:24px 0}
+.qnum{font-size:13px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+h3{font-size:18px;line-height:1.45;margin:7px 0 12px}
+.options{margin:0 0 16px 22px;padding:0;color:#343541}
+.options li{padding:2px 0 2px 4px}
+.answer{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--greenSoft);border-radius:10px;margin:14px 0 10px}
+.answer span{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#047857;font-weight:800;padding-top:2px}
+.answer strong{color:#065f46}
+.explanation{font-size:15px;color:#343541}
+.explanation b{color:var(--text)}
+footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:13px}
+@media print{nav{display:none} .wrap{max-width:none;padding:15mm} .qcard{break-inside:avoid}}
+</style>
 </head>
 <body>
-<div class="container">
-
-  <div class="hero">
-    <h1>BLOCK 3.7 — SECTION B</h1>
-    <div class="subtitle">MCQ Answers with the WHY and HOW — Questions 1–69</div>
-  </div>
-
-  <div class="section-title">BURKITT LYMPHOMA CASE — Q1–5</div>
-
-  <div class="q">
-    <h3>1. Most likely histological/clinical variant?</h3>
-    <div class="answer">✅ C. Endemic Burkitt lymphoma</div>
-    <div class="why"><b>Why?</b> She is a 12-year-old child from Ghana, in sub-Saharan Africa. Endemic Burkitt lymphoma classically affects African children.</div>
-    <p><b>How?</b> It is a mature B-cell lymphoma driven by MYC activation, usually from t(8;14), and is strongly associated with EBV in the endemic form.</p>
-  </div>
-
-  <div class="q">
-    <h3>2. Most likely head and neck presentation?</h3>
-    <div class="answer">✅ B. Dental anarchy</div>
-    <div class="why"><b>Why?</b> Endemic Burkitt lymphoma commonly involves the jaw and facial bones.</div>
-    <p>Tumour infiltration disrupts developing teeth, causing loose teeth, displaced teeth, premature eruption and abnormal arrangement of teeth — the classic “dental anarchy” appearance.</p>
-  </div>
-
-  <div class="q">
-    <h3>3. Best investigation to confirm the diagnosis?</h3>
-    <div class="answer">✅ C. Core needle biopsy</div>
-    <div class="why"><b>Why?</b> Lymphoma diagnosis requires tissue so the pathologist can assess morphology and immunophenotype.</div>
-    <p>CT/MRI can show the mass but do not establish histological diagnosis. Bone marrow aspiration is mainly useful for staging or detecting marrow involvement.</p>
-  </div>
-
-  <div class="q">
-    <h3>4. Cure rate for Burkitt lymphoma?</h3>
-    <div class="answer">✅ D. About 90%</div>
-    <p>Burkitt lymphoma is extremely aggressive but also extremely chemosensitive. In appropriately treated children, cure rates can approach 80–90% or more depending on stage and treatment setting.</p>
-  </div>
-
-  <div class="q">
-    <h3>5. EBV implicated in what proportion of sporadic Burkitt lymphoma?</h3>
-    <div class="answer">✅ A. 25% — best option</div>
-    <p>Endemic Burkitt has a very strong EBV association, whereas sporadic Burkitt has a much lower association. Among the options, 25% is the best answer.</p>
-  </div>
-
-  <div class="section-title">DIC / OBSTETRIC BLEEDING CASE — Q6–10</div>
-
-  <div class="q">
-    <h3>6. Most likely diagnosis?</h3>
-    <div class="answer">✅ C. Disseminated intravascular coagulation (DIC)</div>
-    <div class="why"><b>Why?</b> The major clue is bleeding from several unrelated sites at the same time — skin, oral mucosa and genital tract.</div>
-    <div class="flow">Massive coagulation activation → widespread microthrombi → consumption of platelets + clotting factors → severe generalized bleeding</div>
-  </div>
-
-  <div class="q">
-    <h3>7. Which clotting factors are commonly involved?</h3>
-    <div class="answer">✅ E. All of the above</div>
-    <p>DIC is a consumption coagulopathy. Multiple factors are consumed, including Factor X, Factor II, Factor I (fibrinogen) and Factor VII.</p>
-  </div>
-
-  <div class="q">
-    <h3>8. Treatment of choice from the listed options?</h3>
-    <div class="answer">✅ C. Fresh frozen plasma (FFP)</div>
-    <p>FFP replaces multiple clotting factors at once in an actively bleeding patient with DIC.</p>
-    <p><b>Remember:</b> Cryoprecipitate is especially useful when fibrinogen is critically low; platelets are given for severe thrombocytopenia with bleeding; PRBCs replace red cells, not the full set of consumed clotting factors.</p>
-  </div>
-
-  <div class="q">
-    <h3>9. Which clotting factor is the primary cause of the current state?</h3>
-    <div class="answer">✅ C. Factor VII — best available answer</div>
-    <p class="warning">The question is imperfect.</p>
-    <p>The true initiating molecule in obstetric DIC is <b>Tissue Factor = Factor III</b>. It complexes with Factor VII/VIIa and activates Factor X.</p>
-    <div class="flow">Tissue Factor (III) + VIIa → X → Xa → thrombin → fibrin → widespread coagulation → consumption → DIC</div>
-    <p>Because Factor III is not listed, Factor VII is the best available answer.</p>
-  </div>
-
-  <div class="q">
-    <h3>10. Ideal clotting test among the options?</h3>
-    <div class="answer">✅ A. PT — Prothrombin Time</div>
-    <p>PT evaluates the extrinsic and common pathways, especially Factor VII, X, V, II and I. In real DIC workup, PT is interpreted together with aPTT, platelet count, fibrinogen and D-dimer/FDPs.</p>
-  </div>
-
-  <div class="section-title">HAEMOPHILIA FAMILY CASE — Q11–17</div>
-
-  <div class="q">
-    <h3>11. Probability Mr Kofi would have haemophilia A?</h3>
-    <div class="answer">✅ B. 1 = 100%, if the wording is taken literally</div>
-    <p>Hemophilia A is X-linked recessive. If his mother truly had hemophilia A (XʰXʰ), every son would inherit Xʰ from her and therefore be affected.</p>
-    <p class="warning">If the examiner actually intended the grandmother to be a carrier, the answer would instead be ½.</p>
-  </div>
-
-  <div class="q">
-    <h3>12. What percentage of Mr Kofi’s sisters had clinical disease?</h3>
-    <div class="answer">✅ E. None of the above — essentially 0% under the usual assumption</div>
-    <p>Daughters receiving one affected X and one normal X are usually carriers rather than clinically affected, although lyonization can occasionally produce symptoms.</p>
-  </div>
-
-  <div class="q">
-    <h3>13. Percentage of Mr Kofi and Madam Hawa’s children who will express disease?</h3>
-    <div class="answer">✅ A. 50%</div>
-    <p>Madam Hawa’s father had hemophilia, so she is an obligate carrier. If Mr Kofi is affected, the cross produces 2 affected children out of 4 possible genotypes = 50%.</p>
-  </div>
-
-  <div class="q">
-    <h3>14. Probability Edmund’s sons will have haemophilia?</h3>
-    <div class="answer">✅ A. ½</div>
-    <p>Christiana is treated as a carrier. Each son gets Y from Edmund and one X from Christiana. She has a 50% chance of passing the affected X to each son.</p>
-  </div>
-
-  <div class="q">
-    <h3>15. Probability Edmund’s daughters will be normal?</h3>
-    <div class="answer">✅ D. 1 = 100% clinically unaffected</div>
-    <p>Assuming Edmund is not hemophiliac, every daughter receives his normal X. Daughters can therefore be normal or carriers, but not classically affected.</p>
-    <p><b>Important:</b> only 50% would be genetically non-carriers.</p>
-  </div>
-
-  <div class="q">
-    <h3>16. Common clinical presentation of hemophilia?</h3>
-    <div class="answer">✅ D. Haemarthrosis</div>
-    <p>Coagulation-factor disorders cause deep bleeding — joints and muscles — rather than the petechiae and mucosal bleeding seen in platelet disorders.</p>
-  </div>
-
-  <div class="q">
-    <h3>17. How is Hemophilia B definitively diagnosed?</h3>
-    <div class="answer">✅ C. Factor assay</div>
-    <p>Hemophilia B = Factor IX deficiency. aPTT may be prolonged, but confirmation is by Factor IX activity assay.</p>
-  </div>
-
-  <div class="section-title">ANAEMIA / TRANSFUSION / PLATELETS — Q18–30</div>
-
-  <div class="q"><h3>18. Colon adenocarcinoma blood film — finding that does NOT fit?</h3><div class="answer">✅ D. Microcytic normochromic RBCs</div><p>Chronic occult GI blood loss causes iron deficiency, classically progressing to microcytic hypochromic cells with anisocytosis and poikilocytosis.</p></div>
-
-  <div class="q"><h3>19. Blood product for serious warfarin overdose?</h3><div class="answer">✅ C. Fresh frozen plasma</div><p>Warfarin reduces vitamin-K-dependent factors II, VII, IX and X. FFP replaces these clotting factors. In modern practice, life-threatening bleeding is usually reversed more rapidly with 4-factor PCC plus IV vitamin K where available.</p></div>
-
-  <div class="q"><h3>20. 12-year-old with CHF and severe anaemia — best blood product?</h3><div class="answer">✅ B. Packed red blood cells</div><p>PRBCs raise oxygen-carrying capacity while avoiding the extra plasma volume of whole blood — important in heart failure.</p></div>
-
-  <div class="q"><h3>21. Classic contaminant able to grow in refrigerated stored blood?</h3><div class="answer">✅ C. Yersinia enterocolitica</div><p>Yersinia can proliferate at refrigerator temperatures used for red-cell storage and can cause severe transfusion-associated sepsis.</p></div>
-
-  <div class="q"><h3>22. Mild Hemophilia A treatment?</h3><div class="answer">✅ C. Desmopressin acetate (DDAVP)</div><p>DDAVP increases endothelial release of vWF and Factor VIII, so it is useful in mild Hemophilia A.</p></div>
-
-  <div class="q"><h3>23. Each random-donor platelet unit raises platelet count by?</h3><div class="answer">✅ A. About 5,000–10,000/µL</div></div>
-
-  <div class="q"><h3>24. Odd member among inherited predispositions to hematological malignancy?</h3><div class="answer">✅ B. Klinefelter syndrome</div><p>Bloom syndrome, Fanconi anaemia, ataxia-telangiectasia and Wiskott-Aldrich are classic inherited disorders linked to hematologic malignancy risk. Klinefelter is the odd member here.</p></div>
-
-  <div class="q"><h3>25. Normal CD4+:CD8+ ratio?</h3><div class="answer">✅ A. Approximately 2:1</div></div>
-
-  <div class="q"><h3>26. GI causes of nutritional/B12 deficiency — odd member?</h3><div class="answer">✅ E. Tropical sprue — best exam answer</div><p>This question is imperfect because tropical sprue can also cause B12 deficiency. The other listed causes are more directly classic for B12 malabsorption.</p></div>
-
-  <div class="q"><h3>27. Reduced mobilization of neutrophils from bone marrow?</h3><div class="answer">✅ B. Lazy leukocyte syndrome</div></div>
-
-  <div class="q"><h3>28. Immune-related cause of neutropenia?</h3><div class="answer">✅ E. Felty syndrome</div><p>Classic triad: rheumatoid arthritis + splenomegaly + neutropenia.</p></div>
-
-  <div class="q"><h3>29. Purpose of a major crossmatch?</h3><div class="answer">✅ D. Detect antibodies against antigens on donor RBCs</div><p>Recipient serum/plasma is tested against donor red cells to detect incompatibility.</p></div>
-
-  <div class="q"><h3>30. Forward blood grouping involves?</h3><div class="answer">✅ A. Patient RBCs + known anti-A and anti-B antisera</div><p>Forward grouping identifies which ABO antigens are present on the patient’s red cells.</p></div>
-
-  <div class="section-title">APLASTIC ANAEMIA / SICKLE CELL / B12 — Q31–46</div>
-
-  <div class="q"><h3>31. Virus implicated in aplastic anaemia?</h3><div class="answer">✅ B. HBV — best answer</div><p>Hepatitis-associated aplastic anaemia is a recognized syndrome. Parvovirus B19 classically causes pure red cell aplasia or transient aplastic crisis rather than generalized pancytopenic aplastic anaemia.</p></div>
-
-  <div class="q"><h3>32. Sudden pooling of RBCs in spleen in sickle cell disease?</h3><div class="answer">✅ B. Sequestration crisis</div><div class="flow">Splenic trapping → rapid splenic enlargement → acute fall in circulating blood volume → severe anaemia ± shock</div></div>
-
-  <div class="q"><h3>33. Organ/tissue commonly affected in vitamin B12 deficiency?</h3><div class="answer">✅ B. Gastrointestinal mucosa</div><p>Rapidly dividing GI epithelial cells are strongly affected because B12 deficiency impairs DNA synthesis. Neurological tissue is also importantly affected.</p></div>
-
-  <div class="q"><h3>34. Neural tube defects associated with deficiency of?</h3><div class="answer">✅ D. Folate</div></div>
-
-  <div class="q"><h3>35. Which genotype defines sickle disease?</h3><div class="answer">✅ C. Genotype SS — likely intended answer</div><p class="warning">Technically, sickle cell disease also includes HbSC and HbS/β-thalassemia. HbSS specifically defines classic sickle cell anaemia.</p></div>
-
-  <div class="q"><h3>36. HbA₂ concentration in a neonate?</h3><div class="answer">✅ C. About 0.5%</div><p>Delta-chain production is low at birth, so HbA₂ is very low in neonates.</p></div>
-
-  <div class="q"><h3>37. Transport protein synthesized in stomach?</h3><div class="answer">✅ B. Intrinsic factor</div><p>Produced by gastric parietal cells and required for B12 absorption in the terminal ileum.</p></div>
-
-  <div class="q"><h3>38. Parasite associated with iron-deficiency anaemia?</h3><div class="answer">✅ C. Schistosoma haematobium — best option given</div><p>The classic parasite causing iron deficiency is hookworm, but it is not listed. S. haematobium can cause chronic urinary blood loss and iron deficiency.</p></div>
-
-  <div class="q"><h3>39. Intestinal causes of B12 deficiency EXCEPT?</h3><div class="answer">✅ C. Pernicious anaemia</div><p>Pernicious anaemia is primarily an autoimmune gastric disorder causing intrinsic-factor deficiency.</p></div>
-
-  <div class="q"><h3>40. Where is B12 absorbed?</h3><div class="answer">✅ B. Ileum — specifically terminal ileum</div></div>
-
-  <div class="q"><h3>41. First protein that binds food-derived B12?</h3><div class="answer">✅ D. Cobalophilins / Haptocorrin</div><div class="flow">Food B12 → haptocorrin first → released in duodenum → intrinsic factor → terminal ileum absorption</div></div>
-
-  <div class="q"><h3>42. Oral iron absorption is maximal where?</h3><div class="answer">✅ C. First part of the duodenum</div></div>
-
-  <div class="q"><h3>43. Percentage of oral iron absorbed?</h3><div class="answer">✅ A. About 5–10%</div></div>
-
-  <div class="q"><h3>44. RBC index used for morphological classification of anaemia?</h3><div class="answer">✅ D. MCV</div><p>Low MCV = microcytic; normal MCV = normocytic; high MCV = macrocytic.</p></div>
-
-  <div class="q"><h3>45. First site of fetal hematopoiesis?</h3><div class="answer">✅ C. Yolk sac</div><div class="flow">Yolk sac → liver → spleen contribution → bone marrow</div></div>
-
-  <div class="q"><h3>46. Hormone regulating/sensing need for erythropoiesis?</h3><div class="answer">✅ C. Erythropoietin</div><div class="flow">Low oxygen → renal HIF activation → ↑ EPO → marrow erythroid proliferation → ↑ RBCs</div></div>
-
-  <div class="section-title">HAEMATOPOIESIS / PLATELETS — Q47–53</div>
-
-  <div class="q"><h3>47. Cofactors for erythropoiesis EXCEPT?</h3><div class="answer">✅ E. Calcium</div></div>
-  <div class="q"><h3>48. Commonest haemoglobin in cord blood?</h3><div class="answer">✅ C. α₂γ₂ = HbF</div></div>
-  <div class="q"><h3>49. Rate of haemopoiesis in a healthy adult?</h3><div class="answer">✅ C. Approximately 10¹² new blood cells/day</div></div>
-  <div class="q"><h3>50. Percentage of normal adult haemopoietic activity occurring in bone marrow?</h3><div class="answer">✅ E. 100% — intended answer</div></div>
-  <div class="q"><h3>51. Growth factor acting on very early/pluripotent stem cells?</h3><div class="answer">✅ C. SCF — Stem Cell Factor</div><p>SCF acts through c-KIT and supports survival and proliferation of early hematopoietic stem/progenitor cells.</p></div>
-  <div class="q"><h3>52. Weibel-Palade bodies are synthesized in?</h3><div class="answer">✅ D. Endothelial cells</div><p>They store von Willebrand factor and P-selectin.</p></div>
-  <div class="q"><h3>53. Normal platelet lifespan?</h3><div class="answer">✅ C. About 9–10 days</div></div>
-
-  <div class="section-title">FIGURE 1 — LIKELY MULTIPLE MYELOMA — Q54–57</div>
-
-  <div class="q"><h3>54. Renal pathology that may result?</h3><div class="answer">✅ A. Amyloidosis — best pathological answer</div><p>Myeloma light chains can cause cast nephropathy, AL amyloidosis and light-chain deposition disease. Since cast nephropathy is not listed, amyloidosis is the best option.</p></div>
-
-  <div class="q"><h3>55. Likely clinical feature?</h3><div class="answer">✅ E. Pathological fracture</div><p>Osteolytic lesions weaken bone, producing bone pain and pathological fractures.</p></div>
-
-  <div class="q"><h3>56. Condition is more common in?</h3><div class="answer">✅ E. Elderly Black women — best available option</div><p>Multiple myeloma predominantly affects older adults and is more common in people of African ancestry. Men are actually somewhat more commonly affected than women, so the option is not perfect.</p></div>
-
-  <div class="q"><h3>57. What happens to ESR?</h3><div class="answer">✅ D. ESR will be high</div><p>Monoclonal immunoglobulins promote rouleaux formation, making red cells sediment faster.</p></div>
-
-  <div class="section-title">FIGURE 2 — HODGKIN LYMPHOMA — Q58–61</div>
-
-  <div class="q"><h3>58. Right supraclavicular + right para-aortic nodes = what Ann Arbor stage?</h3><div class="answer">✅ B. Stage III</div><p>Nodal disease exists above and below the diaphragm.</p></div>
-
-  <div class="q"><h3>59. Most likely anaemia?</h3><div class="answer">✅ A. Normochromic — usually normocytic normochromic</div><p>Chronic inflammation increases hepcidin, trapping iron and reducing erythropoiesis.</p></div>
-
-  <div class="q"><h3>60. Which immunity is impaired?</h3><div class="answer">✅ C. Cellular immunity</div><p>Hodgkin lymphoma is classically associated with impaired T-cell-mediated immunity.</p></div>
-
-  <div class="q"><h3>61. Risk of which malignancy?</h3><div class="answer">✅ A. Diffuse large B-cell lymphoma — best option</div><p>Patients with Hodgkin lymphoma, especially after treatment, have increased risk of secondary malignancies including non-Hodgkin lymphomas.</p></div>
-
-  <div class="section-title">FIGURE 3 — ACUTE LEUKAEMIA — Q62–66</div>
-
-  <div class="q"><h3>62. FAB classification?</h3><div class="answer">✅ A. ALL L2</div><p>Old FAB L2 morphology describes larger, more heterogeneous lymphoblasts than L1.</p></div>
-
-  <div class="q"><h3>63. Which age group is L2 historically more common in?</h3><div class="answer">✅ C. Adults</div><p>ALL overall is commonest in children, but FAB L2 morphology was historically relatively more associated with adults.</p></div>
-
-  <div class="q"><h3>64. Common cell lineage?</h3><div class="answer">✅ A. B lymphocytes</div><p>Most childhood ALL is B-lymphoblastic leukemia/lymphoma.</p></div>
-
-  <div class="q"><h3>65. Prognosis?</h3><div class="answer">✅ C. Bad — in the old FAB framework</div><p>Historically L2 morphology had worse prognosis than L1. Modern prognosis depends much more on genetics, age, WBC count, treatment response and measurable residual disease.</p></div>
-
-  <div class="q"><h3>66. Common secondary/sanctuary site?</h3><div class="answer">✅ E. Brain/CNS</div><p>The CNS is a major sanctuary site in ALL, which is why CNS-directed prophylaxis is part of therapy.</p></div>
-
-  <div class="section-title">FIGURE 4 — PREGNANT WOMAN / VERY HIGH PLATELET COUNT — Q67–69</div>
-
-  <div class="q"><h3>67. Most likely haematological abnormality?</h3><div class="answer">✅ B. Thrombophilia — intended answer</div><p class="warning">Technically, the actual abnormality is thrombocytosis. “Thrombophilia” means a tendency to thrombosis.</p></div>
-
-  <div class="q"><h3>68. She may present with?</h3><div class="answer">✅ B. Thrombosis</div><p>Marked thrombocytosis can increase risk of arterial, venous and microvascular thrombosis.</p></div>
-
-  <div class="q"><h3>69. Most appropriate test from the listed options?</h3><div class="answer">✅ C. Bleeding time — intended older exam answer</div><p>PT and aPTT assess coagulation pathways, whereas bleeding time was historically used to assess primary haemostasis/platelet function. Modern practice relies on more specific platelet and vWF testing.</p></div>
-
-  <div class="answer-key">
-    <h2 style="margin-top:0">SUPER-FAST ANSWER STRING</h2>
-<pre>1 C
-2 B
-3 C
-4 D
-5 A
-6 C
-7 E
-8 C
-9 C*
-10 A
-11 B*
-12 E
-13 A
-14 A
-15 D*
-16 D
-17 C
-18 D
-19 C
-20 B
-21 C
-22 C
-23 A
-24 B
-25 A
-26 E*
-27 B
-28 E
-29 D
-30 A
-31 B
-32 B
-33 B
-34 D
-35 C*
-36 C
-37 B
-38 C*
-39 C
-40 B
-41 D
-42 C
-43 A
-44 D
-45 C
-46 C
-47 E
-48 C
-49 C
-50 E
-51 C
-52 D
-53 C
-54 A*
-55 E
-56 E*
-57 D
-58 B
-59 A
-60 C
-61 A
-62 A
-63 C
-64 A
-65 C*
-66 E
-67 B*
-68 B
-69 C*</pre>
-    <p class="small">* = wording or modern-knowledge caveat explained in the relevant answer above.</p>
-  </div>
-
-  <div class="section-title">5 HIGH-YIELD THINGS NOT TO GET TRICKED BY</div>
-  <div class="high-yield">
-    <div class="tip"><b>DIC:</b> Tissue Factor III is the true initiator → Factor VII → X → thrombin. If Factor III is absent from the options, VII may be the best available answer.</div>
-    <div class="tip"><b>Hemophilia:</b> Deep bleeding and haemarthrosis, not petechiae. Hemophilia A = Factor VIII deficiency; Hemophilia B = Factor IX deficiency. Confirm by factor assay.</div>
-    <div class="tip"><b>B12 journey:</b> Haptocorrin/cobalophilin first → intrinsic factor later → terminal ileum absorption.</div>
-    <div class="tip"><b>Iron + anaemia classification:</b> Iron is absorbed mainly in the duodenum. Morphological classification of anaemia is based primarily on MCV.</div>
-    <div class="tip"><b>ALL:</b> ALL overall is mainly a childhood disease, but old FAB L2 morphology was relatively more associated with adults.</div>
-  </div>
-
-</div>
+<main class="wrap">
+<header>
+<h1>Block 3.7 — Section B</h1>
+<div class="sub">Full questions • Answers • Why & how explanations • Q1–69</div>
+<div class="note"><b>Study note:</b> Question wording has been lightly normalized where the scan is unclear. Where a question is medically imperfect or outdated, the explanation states the caveat instead of blindly following a marked key.</div>
+</header>
+<nav><a href="#s1">Burkitt lymphoma case — Q1–5</a><a href="#s2">DIC / obstetric bleeding case — Q6–10</a><a href="#s3">Haemophilia family case — Q11–17</a><a href="#s4">Anaemia, transfusion &amp; platelets — Q18–30</a><a href="#s5">Aplastic anaemia, sickle cell disease &amp; vitamin B12 — Q31–46</a><a href="#s6">Haematopoiesis &amp; platelets — Q47–53</a><a href="#s7">Figure-based: multiple myeloma — Q54–57</a><a href="#s8">Figure-based: Hodgkin lymphoma — Q58–61</a><a href="#s9">Figure-based: acute lymphoblastic leukaemia — Q62–66</a><a href="#s10">Pregnant woman with marked thrombocytosis — Q67–69</a></nav>
+<section id="s1"><h2>Burkitt lymphoma case — Q1–5</h2>
+        <article class="qcard" id="q1">
+          <div class="qnum">Question 1</div>
+          <h3>Which histological/clinical variant of Burkitt lymphoma is most likely in this 12-year-old child from Nandom with a rapidly growing mass?</h3>
+          <ol class="options" type="A"><li>A. Organ-transplant related</li><li>B. Diffuse B-cell lymphoma / HIV-associated variant</li><li>C. Endemic</li><li>D. Chemotherapy-related</li><li>E. Sporadic</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Endemic Burkitt lymphoma</strong></div>
+          <div class="explanation"><b>Why / how:</b> Endemic Burkitt lymphoma classically affects children in equatorial/sub-Saharan Africa. The important mechanism is MYC activation, usually by t(8;14), causing extremely rapid B-cell proliferation. EBV association is very strong in the endemic form.</div>
+        </article>
+        <article class="qcard" id="q2">
+          <div class="qnum">Question 2</div>
+          <h3>What is the most likely oral/head-and-neck presentation of endemic Burkitt lymphoma?</h3>
+          <ol class="options" type="A"><li>A. Bleeding gums</li><li>B. Dental anarchy</li><li>C. Ulcers</li><li>D. Dental cysts</li><li>E. Cervical lymphadenopathy</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Dental anarchy</strong></div>
+          <div class="explanation"><b>Why / how:</b> Endemic Burkitt lymphoma often involves the jaw and facial bones. Tumour infiltration disturbs developing teeth, producing loose, displaced or prematurely erupted teeth — the classic &#x27;dental anarchy&#x27; appearance.</div>
+        </article>
+        <article class="qcard" id="q3">
+          <div class="qnum">Question 3</div>
+          <h3>What is the best investigation to confirm the diagnosis?</h3>
+          <ol class="options" type="A"><li>A. CT scan of the head</li><li>B. MRI of the head</li><li>C. Core needle biopsy</li><li>D. Bone marrow aspirate</li><li>E. X-ray of the skull</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Core needle biopsy</strong></div>
+          <div class="explanation"><b>Why / how:</b> Lymphoma is a tissue diagnosis. Imaging shows the mass but does not establish histology. A tissue biopsy allows morphology, immunophenotyping and further classification. Bone marrow examination is mainly useful for staging.</div>
+        </article>
+        <article class="qcard" id="q4">
+          <div class="qnum">Question 4</div>
+          <h3>What is the approximate cure rate for Burkitt lymphoma with appropriate treatment?</h3>
+          <ol class="options" type="A"><li>A. 60%</li><li>B. 67%</li><li>C. 75%</li><li>D. About 90%</li><li>E. 35%</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. About 90%</strong></div>
+          <div class="explanation"><b>Why / how:</b> Burkitt lymphoma grows extremely fast but is also highly chemosensitive. Cure rates in appropriately treated children can approach 80–90% or higher depending on stage and resources.</div>
+        </article>
+        <article class="qcard" id="q5">
+          <div class="qnum">Question 5</div>
+          <h3>EBV is implicated in approximately what proportion of sporadic Burkitt lymphoma?</h3>
+          <ol class="options" type="A"><li>A. 25%</li><li>B. 30%</li><li>C. 45%</li><li>D. 35%</li><li>E. 90%</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. 25% — best option</strong></div>
+          <div class="explanation"><b>Why / how:</b> EBV is present in most endemic Burkitt lymphomas, but only a minority of sporadic cases. Among the listed choices, 25% is the best fit.</div>
+        </article></section><section id="s2"><h2>DIC / obstetric bleeding case — Q6–10</h2>
+        <article class="qcard" id="q6">
+          <div class="qnum">Question 6</div>
+          <h3>A 14-year-old adolescent female has 2 months of amenorrhoea, severe lower abdominal pain, vaginal bleeding, and bleeding from the skin, vulva, cervix and oral mucosa. What is the most likely diagnosis at presentation?</h3>
+          <ol class="options" type="A"><li>A. Haemolytic disease of the newborn</li><li>B. Haemolytic anaemia</li><li>C. Disseminated intravascular coagulation</li><li>D. Placental abruption</li><li>E. Haemorrhagic shock</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Disseminated intravascular coagulation (DIC)</strong></div>
+          <div class="explanation"><b>Why / how:</b> Bleeding from multiple unrelated sites strongly suggests a systemic consumption coagulopathy. In DIC, coagulation is activated widely, microthrombi form, and platelets plus clotting factors are consumed. The patient then bleeds because the haemostatic system has been exhausted.</div>
+        </article>
+        <article class="qcard" id="q7">
+          <div class="qnum">Question 7</div>
+          <h3>Which clotting factors are commonly involved/consumed in DIC?</h3>
+          <ol class="options" type="A"><li>A. Factor X</li><li>B. Factor II</li><li>C. Factor I</li><li>D. Factor VII</li><li>E. All of the above</li></ol>
+          <div class="answer"><span>Answer</span><strong>E. All of the above</strong></div>
+          <div class="explanation"><b>Why / how:</b> DIC consumes multiple clotting factors and platelets. Factor I is fibrinogen, which may become markedly reduced; Factors II, VII and X are also consumed.</div>
+        </article>
+        <article class="qcard" id="q8">
+          <div class="qnum">Question 8</div>
+          <h3>What is the treatment of choice from the listed blood products in this actively bleeding patient with DIC?</h3>
+          <ol class="options" type="A"><li>A. Packed red blood cells</li><li>B. Cryoprecipitate</li><li>C. Fresh frozen plasma</li><li>D. Whole blood</li><li>E. Platelet concentrate</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Fresh frozen plasma (FFP)</strong></div>
+          <div class="explanation"><b>Why / how:</b> FFP replaces multiple coagulation factors at once. Cryoprecipitate is particularly useful when fibrinogen is critically low, platelets are used when thrombocytopenia is severe with bleeding, and PRBCs replace red cells rather than the full set of consumed factors.</div>
+        </article>
+        <article class="qcard" id="q9">
+          <div class="qnum">Question 9</div>
+          <h3>Which clotting factor is the best available answer for the factor primarily involved in initiating this patient&#x27;s DIC?</h3>
+          <ol class="options" type="A"><li>A. Factor XII</li><li>B. Factor X</li><li>C. Factor VII</li><li>D. Calcium</li><li>E. Factor II</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Factor VII — best available answer</strong></div>
+          <div class="explanation"><b>Why / how:</b> The true initiator in obstetric DIC is tissue factor (Factor III), but it is not listed. Tissue factor binds Factor VII/VIIa, which activates Factor X, leading to a thrombin burst, widespread fibrin formation, consumption of platelets/factors, and DIC.</div>
+        </article>
+        <article class="qcard" id="q10">
+          <div class="qnum">Question 10</div>
+          <h3>Which clotting test is the best single test from the options to request in this pathway?</h3>
+          <ol class="options" type="A"><li>A. PT</li><li>B. vWF factor assay</li><li>C. PTT</li><li>D. Bedside bleeding time</li><li>E. None of the above</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. PT — Prothrombin Time</strong></div>
+          <div class="explanation"><b>Why / how:</b> PT assesses the extrinsic and common pathways, especially Factor VII and downstream Factors X, V, II and I. In real DIC evaluation, PT is interpreted with aPTT, platelet count, fibrinogen and D-dimer/FDPs.</div>
+        </article></section><section id="s3"><h2>Haemophilia family case — Q11–17</h2>
+        <article class="qcard" id="q11">
+          <div class="qnum">Question 11</div>
+          <h3>Given the family history in the stem, what is the probability that Mr Kofi would have haemophilia A?</h3>
+          <ol class="options" type="A"><li>A. 1/2</li><li>B. 1</li><li>C. 1/4</li><li>D. 1/8</li><li>E. 1/3</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. 1 = 100% if the wording is taken literally</strong></div>
+          <div class="explanation"><b>Why / how:</b> Haemophilia A is X-linked recessive. If Mr Kofi&#x27;s mother truly had haemophilia A (XʰXʰ), every son would receive Xʰ from her and therefore be affected. If the examiner merely intended her to be a carrier, the probability would instead be 1/2.</div>
+        </article>
+        <article class="qcard" id="q12">
+          <div class="qnum">Question 12</div>
+          <h3>What percentage of Mr Kofi&#x27;s sisters would have clinical haemophilia under the usual inheritance assumption?</h3>
+          <ol class="options" type="A"><li>A. 50%</li><li>B. 25%</li><li>C. 75%</li><li>D. 100%</li><li>E. None of the above</li></ol>
+          <div class="answer"><span>Answer</span><strong>E. None of the above — essentially 0% in the usual scenario</strong></div>
+          <div class="explanation"><b>Why / how:</b> Female relatives who inherit one abnormal X and one normal X are usually carriers, not classically affected. Symptomatic females can occur because of skewed X-inactivation, but that is not the standard exam assumption.</div>
+        </article>
+        <article class="qcard" id="q13">
+          <div class="qnum">Question 13</div>
+          <h3>What percentage of the children of Mr Kofi and Madam Hawa would be expected to express haemophilia in the pedigree described?</h3>
+          <ol class="options" type="A"><li>A. 50%</li><li>B. 25%</li><li>C. 75%</li><li>D. 100%</li><li>E. None of the above</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. 50%</strong></div>
+          <div class="explanation"><b>Why / how:</b> Madam Hawa&#x27;s father had haemophilia, so she is an obligate carrier. If Mr Kofi is affected, the cross can produce affected sons and affected daughters; two of four basic genotype outcomes are affected, giving 50%.</div>
+        </article>
+        <article class="qcard" id="q14">
+          <div class="qnum">Question 14</div>
+          <h3>What is the probability that Edmund&#x27;s sons would have haemophilia, assuming Christiana is a carrier?</h3>
+          <ol class="options" type="A"><li>A. 1/2</li><li>B. 1/4</li><li>C. 1/8</li><li>D. None of the above</li><li>E. 1</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. 1/2</strong></div>
+          <div class="explanation"><b>Why / how:</b> A son receives Y from his father and his only X chromosome from his mother. A carrier mother has a 50% chance of transmitting the affected X to each son.</div>
+        </article>
+        <article class="qcard" id="q15">
+          <div class="qnum">Question 15</div>
+          <h3>What is the probability that Edmund&#x27;s daughters will be clinically normal, assuming Edmund does not have haemophilia?</h3>
+          <ol class="options" type="A"><li>A. 1/2</li><li>B. 1/4</li><li>C. 2/3</li><li>D. 1</li><li>E. None of the above</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. 1 = 100% clinically unaffected</strong></div>
+          <div class="explanation"><b>Why / how:</b> Every daughter receives Edmund&#x27;s normal X. Therefore daughters may be genetically normal or carriers, but they would not have classical haemophilia. Only 50% would be completely non-carriers.</div>
+        </article>
+        <article class="qcard" id="q16">
+          <div class="qnum">Question 16</div>
+          <h3>What is the common clinical presentation of haemophilia?</h3>
+          <ol class="options" type="A"><li>A. Prolonged bleeding time</li><li>B. Petechial haemorrhages</li><li>C. Bleeding gums</li><li>D. Haemarthrosis</li><li>E. Anaemia</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. Haemarthrosis</strong></div>
+          <div class="explanation"><b>Why / how:</b> Coagulation-factor deficiencies cause deep-tissue bleeding, especially bleeding into joints and muscles. Petechiae and mucosal bleeding point more toward platelet disorders.</div>
+        </article>
+        <article class="qcard" id="q17">
+          <div class="qnum">Question 17</div>
+          <h3>How is haemophilia B definitively diagnosed?</h3>
+          <ol class="options" type="A"><li>A. PTT</li><li>B. PT</li><li>C. Factor assay</li><li>D. Clinical history</li><li>E. D-dimer assay</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Factor assay</strong></div>
+          <div class="explanation"><b>Why / how:</b> Haemophilia B is Factor IX deficiency. aPTT may be prolonged, but definitive diagnosis is by measuring Factor IX activity.</div>
+        </article></section><section id="s4"><h2>Anaemia, transfusion &amp; platelets — Q18–30</h2>
+        <article class="qcard" id="q18">
+          <div class="qnum">Question 18</div>
+          <h3>A peripheral blood film from an elderly woman with adenocarcinoma of the colon will show all of the following EXCEPT which finding?</h3>
+          <ol class="options" type="A"><li>A. Anisocytosis</li><li>B. Poikilocytosis</li><li>C. Normocytic normochromic cells may occur early</li><li>D. Microcytic normochromic red cells</li><li>E. Microcytic hypochromic red cells</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. Microcytic normochromic red cells</strong></div>
+          <div class="explanation"><b>Why / how:</b> Chronic occult GI blood loss causes iron deficiency. The classic later picture is microcytic hypochromic anaemia with anisocytosis and poikilocytosis. &#x27;Microcytic normochromic&#x27; is the least fitting combination.</div>
+        </article>
+        <article class="qcard" id="q19">
+          <div class="qnum">Question 19</div>
+          <h3>Which blood product is used for urgent replacement of vitamin-K-dependent clotting factors in serious warfarin-associated bleeding, from the listed options?</h3>
+          <ol class="options" type="A"><li>A. Whole blood</li><li>B. Platelet concentrate</li><li>C. Fresh frozen plasma</li><li>D. Packed red cells</li><li>E. Cryoprecipitate</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Fresh frozen plasma</strong></div>
+          <div class="explanation"><b>Why / how:</b> Warfarin reduces Factors II, VII, IX and X. FFP contains these factors. Modern emergency reversal generally prefers 4-factor PCC plus IV vitamin K when available, but PCC is not among the listed options.</div>
+        </article>
+        <article class="qcard" id="q20">
+          <div class="qnum">Question 20</div>
+          <h3>A 12-year-old with congestive heart failure due to severe anaemia needs transfusion. Which blood product is most appropriate?</h3>
+          <ol class="options" type="A"><li>A. Whole blood</li><li>B. Packed red blood cells</li><li>C. Fresh frozen plasma</li><li>D. Platelet concentrate</li><li>E. Cryoprecipitate</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Packed red blood cells</strong></div>
+          <div class="explanation"><b>Why / how:</b> PRBCs raise oxygen-carrying capacity with less unnecessary plasma volume than whole blood, which is especially important in heart failure where volume overload can worsen the condition.</div>
+        </article>
+        <article class="qcard" id="q21">
+          <div class="qnum">Question 21</div>
+          <h3>Which organism is a classic bacterial contaminant capable of proliferating in refrigerated stored red-cell units?</h3>
+          <ol class="options" type="A"><li>A. Staphylococcus aureus</li><li>B. Pseudomonas aeruginosa</li><li>C. Yersinia enterocolitica</li><li>D. E. coli</li><li>E. Salmonella</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Yersinia enterocolitica</strong></div>
+          <div class="explanation"><b>Why / how:</b> Yersinia can grow at refrigerator temperatures, making it a classic cause of severe transfusion-associated sepsis from stored red cells.</div>
+        </article>
+        <article class="qcard" id="q22">
+          <div class="qnum">Question 22</div>
+          <h3>Mild haemophilia A can be treated with which of the following?</h3>
+          <ol class="options" type="A"><li>A. Whole blood</li><li>B. Packed red cells</li><li>C. Desmopressin acetate</li><li>D. Platelet concentrate</li><li>E. Aspirin</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Desmopressin acetate (DDAVP)</strong></div>
+          <div class="explanation"><b>Why / how:</b> DDAVP releases stored von Willebrand factor and increases circulating Factor VIII, making it useful in mild haemophilia A. It does not treat haemophilia B.</div>
+        </article>
+        <article class="qcard" id="q23">
+          <div class="qnum">Question 23</div>
+          <h3>Each unit of random-donor platelets typically raises the platelet count by approximately how much?</h3>
+          <ol class="options" type="A"><li>A. 5,000–10,000/µL</li><li>B. 2,000–3,000/µL</li><li>C. 2,500–4,000/µL</li><li>D. 500–1,000/µL</li><li>E. 20–700/µL</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. About 5,000–10,000/µL</strong></div>
+          <div class="explanation"><b>Why / how:</b> A single random-donor platelet unit produces a relatively small increment. A full adult therapeutic dose or apheresis unit produces a larger rise.</div>
+        </article>
+        <article class="qcard" id="q24">
+          <div class="qnum">Question 24</div>
+          <h3>Which is the odd member among classic inherited disorders that predispose to haematological malignancy?</h3>
+          <ol class="options" type="A"><li>A. Bloom syndrome</li><li>B. Klinefelter syndrome</li><li>C. Fanconi anaemia</li><li>D. Ataxia-telangiectasia</li><li>E. Wiskott-Aldrich syndrome</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Klinefelter syndrome</strong></div>
+          <div class="explanation"><b>Why / how:</b> Bloom syndrome, Fanconi anaemia, ataxia-telangiectasia and Wiskott-Aldrich are classic inherited genomic-instability/immunodeficiency syndromes linked to haematological malignancies. Klinefelter is the odd member here.</div>
+        </article>
+        <article class="qcard" id="q25">
+          <div class="qnum">Question 25</div>
+          <h3>What is the normal approximate CD4+:CD8+ T-cell ratio?</h3>
+          <ol class="options" type="A"><li>A. 2:1</li><li>B. 1:2</li><li>C. 1:1</li><li>D. 2:2</li><li>E. 1.2:1</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. Approximately 2:1</strong></div>
+          <div class="explanation"><b>Why / how:</b> CD4 helper T cells normally outnumber CD8 cytotoxic T cells; a ratio around 2:1 is a classic teaching value.</div>
+        </article>
+        <article class="qcard" id="q26">
+          <div class="qnum">Question 26</div>
+          <h3>Which is the odd member among the listed gastrointestinal/nutritional causes associated with vitamin B12 deficiency?</h3>
+          <ol class="options" type="A"><li>A. Stagnant intestinal loop</li><li>B. Ileal resection</li><li>C. Crohn disease</li><li>D. Fish tapeworm</li><li>E. Tropical sprue</li></ol>
+          <div class="answer"><span>Answer</span><strong>E. Tropical sprue — best exam answer</strong></div>
+          <div class="explanation"><b>Why / how:</b> The question is imperfect because tropical sprue can also cause B12 deficiency. The other options are more directly classic mechanisms: terminal ileal loss/disease, bacterial competition, or Diphyllobothrium latum competition.</div>
+        </article>
+        <article class="qcard" id="q27">
+          <div class="qnum">Question 27</div>
+          <h3>Which disorder is characterized by reduced mobilization/motility of neutrophils from bone marrow?</h3>
+          <ol class="options" type="A"><li>A. Chediak-Higashi syndrome</li><li>B. Lazy leukocyte syndrome</li><li>C. Chronic granulomatous disease</li><li>D. Myeloperoxidase deficiency</li><li>E. Felty syndrome</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Lazy leukocyte syndrome</strong></div>
+          <div class="explanation"><b>Why / how:</b> This rare disorder involves abnormal neutrophil motility/chemotaxis and impaired mobilization.</div>
+        </article>
+        <article class="qcard" id="q28">
+          <div class="qnum">Question 28</div>
+          <h3>Which is an immune-related cause of neutropenia?</h3>
+          <ol class="options" type="A"><li>A. Chediak-Higashi syndrome</li><li>B. Lazy leukocyte syndrome</li><li>C. Chronic granulomatous disease</li><li>D. Myeloperoxidase deficiency</li><li>E. Felty syndrome</li></ol>
+          <div class="answer"><span>Answer</span><strong>E. Felty syndrome</strong></div>
+          <div class="explanation"><b>Why / how:</b> Felty syndrome is classically rheumatoid arthritis + splenomegaly + neutropenia, with immune-mediated destruction and splenic sequestration contributing.</div>
+        </article>
+        <article class="qcard" id="q29">
+          <div class="qnum">Question 29</div>
+          <h3>What is the purpose of a major cross-match in transfusion medicine?</h3>
+          <ol class="options" type="A"><li>A. Identify donor blood group</li><li>B. Identify patient&#x27;s blood group</li><li>C. Merely &#x27;give safe blood&#x27;</li><li>D. Detect recipient antibodies directed against antigens on donor RBCs</li><li>E. Prevent haemolytic disease of the newborn</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. Detect recipient antibodies against donor RBC antigens</strong></div>
+          <div class="explanation"><b>Why / how:</b> Major crossmatch mixes recipient serum/plasma with donor red cells. Agglutination or haemolysis indicates incompatibility.</div>
+        </article>
+        <article class="qcard" id="q30">
+          <div class="qnum">Question 30</div>
+          <h3>In transfusion medicine, what does forward blood grouping involve?</h3>
+          <ol class="options" type="A"><li>A. Patient RBCs + anti-A and anti-B test sera</li><li>B. Patient RBCs + exogenous antigens</li><li>C. No agglutination reaction</li><li>D. Patient serum + known A or B reagent RBCs</li><li>E. Agglutination at room temperature only</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. Patient RBCs are tested with known anti-A and anti-B antisera</strong></div>
+          <div class="explanation"><b>Why / how:</b> Forward grouping asks which ABO antigens are present on the patient&#x27;s red cells. Reverse grouping instead tests the patient&#x27;s serum against known A and B reagent cells.</div>
+        </article></section><section id="s5"><h2>Aplastic anaemia, sickle cell disease &amp; vitamin B12 — Q31–46</h2>
+        <article class="qcard" id="q31">
+          <div class="qnum">Question 31</div>
+          <h3>Which virus is classically implicated in hepatitis-associated aplastic anaemia among the listed options?</h3>
+          <ol class="options" type="A"><li>A. HIV</li><li>B. HBV</li><li>C. Parvovirus B19</li><li>D. HPV</li><li>E. EBV</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. HBV — best answer</strong></div>
+          <div class="explanation"><b>Why / how:</b> Hepatitis-associated aplastic anaemia is recognized. Parvovirus B19 more classically causes pure red-cell aplasia or transient aplastic crisis rather than generalized pancytopenic aplastic anaemia.</div>
+        </article>
+        <article class="qcard" id="q32">
+          <div class="qnum">Question 32</div>
+          <h3>What is the sickle-cell crisis in which large amounts of blood suddenly pool in the spleen?</h3>
+          <ol class="options" type="A"><li>A. Aplastic crisis</li><li>B. Sequestration crisis</li><li>C. Vaso-occlusive crisis</li><li>D. Haemolytic crisis</li><li>E. Hyperhaemolytic crisis</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Sequestration crisis</strong></div>
+          <div class="explanation"><b>Why / how:</b> Blood becomes trapped in the spleen, causing rapid splenic enlargement, sudden severe anaemia, reduced circulating volume and possible shock.</div>
+        </article>
+        <article class="qcard" id="q33">
+          <div class="qnum">Question 33</div>
+          <h3>Which organ/tissue is commonly affected by vitamin B12 deficiency among the listed options?</h3>
+          <ol class="options" type="A"><li>A. Brain</li><li>B. Gastrointestinal mucosa</li><li>C. Bone</li><li>D. Kidney</li><li>E. Liver</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Gastrointestinal mucosa</strong></div>
+          <div class="explanation"><b>Why / how:</b> B12 deficiency impairs DNA synthesis, so rapidly dividing tissues such as GI epithelium are strongly affected. Neurological tissue is also important clinically.</div>
+        </article>
+        <article class="qcard" id="q34">
+          <div class="qnum">Question 34</div>
+          <h3>Neural tube defects are most strongly associated with deficiency of which nutrient?</h3>
+          <ol class="options" type="A"><li>A. Iron</li><li>B. Vitamin B12</li><li>C. Pernicious anaemia</li><li>D. Folate</li><li>E. Vitamin B6</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. Folate</strong></div>
+          <div class="explanation"><b>Why / how:</b> Folate is crucial for DNA synthesis and early neural-tube closure. Deficiency increases the risk of spina bifida, anencephaly and related defects.</div>
+        </article>
+        <article class="qcard" id="q35">
+          <div class="qnum">Question 35</div>
+          <h3>Which genotype is the classic definition of sickle-cell anaemia in this exam?</h3>
+          <ol class="options" type="A"><li>A. AS</li><li>B. AC</li><li>C. SS</li><li>D. SC</li><li>E. S/β-thalassaemia</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. SS</strong></div>
+          <div class="explanation"><b>Why / how:</b> HbSS is classic sickle-cell anaemia. Strictly, sickle-cell disease is broader and also includes HbSC and HbS/β-thalassaemia.</div>
+        </article>
+        <article class="qcard" id="q36">
+          <div class="qnum">Question 36</div>
+          <h3>What is the approximate concentration of HbA₂ in a neonate?</h3>
+          <ol class="options" type="A"><li>A. 24%</li><li>B. 2.5%</li><li>C. 0.5%</li><li>D. 97%</li><li>E. 12%</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. About 0.5%</strong></div>
+          <div class="explanation"><b>Why / how:</b> HbA₂ is α₂δ₂. Delta-chain production is low at birth, so HbA₂ is very low in neonates and rises later toward adult levels.</div>
+        </article>
+        <article class="qcard" id="q37">
+          <div class="qnum">Question 37</div>
+          <h3>Which vitamin B12-related transport protein is synthesized in the stomach?</h3>
+          <ol class="options" type="A"><li>A. Transcobalamin</li><li>B. Intrinsic factor</li><li>C. Cobalamin</li><li>D. Cobalophilin</li><li>E. Globulin</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Intrinsic factor</strong></div>
+          <div class="explanation"><b>Why / how:</b> Intrinsic factor is secreted by gastric parietal cells and is required for receptor-mediated B12 absorption in the terminal ileum.</div>
+        </article>
+        <article class="qcard" id="q38">
+          <div class="qnum">Question 38</div>
+          <h3>Which parasite is the best available option for causing chronic blood loss leading to iron-deficiency anaemia?</h3>
+          <ol class="options" type="A"><li>A. Plasmodium</li><li>B. Fish tapeworm</li><li>C. Schistosoma haematobium</li><li>D. Liver fluke</li><li>E. None</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Schistosoma haematobium — best available option</strong></div>
+          <div class="explanation"><b>Why / how:</b> Hookworm is the classic parasite causing iron-deficiency anaemia but is not listed. S. haematobium can cause chronic urinary blood loss and iron deficiency.</div>
+        </article>
+        <article class="qcard" id="q39">
+          <div class="qnum">Question 39</div>
+          <h3>Which is NOT primarily an intestinal cause of vitamin B12 deficiency?</h3>
+          <ol class="options" type="A"><li>A. Ileal resection</li><li>B. Crohn disease</li><li>C. Pernicious anaemia</li><li>D. Fish tapeworm</li><li>E. Stagnant intestinal loop</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Pernicious anaemia</strong></div>
+          <div class="explanation"><b>Why / how:</b> Pernicious anaemia begins in the stomach: autoimmune destruction of parietal cells causes intrinsic-factor deficiency. The other options act primarily through intestinal malabsorption or competition.</div>
+        </article>
+        <article class="qcard" id="q40">
+          <div class="qnum">Question 40</div>
+          <h3>Where is vitamin B12 absorbed?</h3>
+          <ol class="options" type="A"><li>A. Jejunum</li><li>B. Ileum</li><li>C. Duodenum</li><li>D. Stomach</li><li>E. Colon</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Ileum — specifically terminal ileum</strong></div>
+          <div class="explanation"><b>Why / how:</b> The intrinsic-factor–B12 complex binds receptors in the terminal ileum for absorption.</div>
+        </article>
+        <article class="qcard" id="q41">
+          <div class="qnum">Question 41</div>
+          <h3>Which protein first binds food-derived vitamin B12 in the upper gastrointestinal tract?</h3>
+          <ol class="options" type="A"><li>A. Transcobalamin</li><li>B. Intrinsic factor</li><li>C. Cobalamin</li><li>D. Cobalophilin / haptocorrin</li><li>E. Albumin</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. Cobalophilin / haptocorrin</strong></div>
+          <div class="explanation"><b>Why / how:</b> B12 first binds haptocorrin in saliva/stomach. Pancreatic enzymes later digest haptocorrin in the duodenum, allowing B12 to bind intrinsic factor.</div>
+        </article>
+        <article class="qcard" id="q42">
+          <div class="qnum">Question 42</div>
+          <h3>Where does oral iron absorption occur maximally?</h3>
+          <ol class="options" type="A"><li>A. Stomach</li><li>B. Jejunum</li><li>C. First part of the duodenum</li><li>D. Ileum</li><li>E. Colon</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. First part of the duodenum</strong></div>
+          <div class="explanation"><b>Why / how:</b> Iron is absorbed mainly in the duodenum and proximal jejunum, with the duodenum being the best answer.</div>
+        </article>
+        <article class="qcard" id="q43">
+          <div class="qnum">Question 43</div>
+          <h3>Approximately what percentage of oral iron is absorbed from the gastrointestinal tract under ordinary conditions?</h3>
+          <ol class="options" type="A"><li>A. 5–10%</li><li>B. 1–3%</li><li>C. 35–40%</li><li>D. 15–25%</li><li>E. 0.5%</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. About 5–10%</strong></div>
+          <div class="explanation"><b>Why / how:</b> Only a minority of ingested iron is normally absorbed. Absorption rises when iron stores are low and falls when hepcidin is high.</div>
+        </article>
+        <article class="qcard" id="q44">
+          <div class="qnum">Question 44</div>
+          <h3>Which red-cell index is most commonly used for the morphological classification of anaemia?</h3>
+          <ol class="options" type="A"><li>A. Hb</li><li>B. MCH</li><li>C. MCHC</li><li>D. MCV</li><li>E. RDW</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. MCV</strong></div>
+          <div class="explanation"><b>Why / how:</b> MCV classifies anaemia as microcytic, normocytic or macrocytic based on average red-cell size.</div>
+        </article>
+        <article class="qcard" id="q45">
+          <div class="qnum">Question 45</div>
+          <h3>What is the first site of fetal haematopoiesis?</h3>
+          <ol class="options" type="A"><li>A. Bone marrow</li><li>B. Thymus</li><li>C. Yolk sac</li><li>D. Kidney</li><li>E. Skull</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Yolk sac</strong></div>
+          <div class="explanation"><b>Why / how:</b> The sequence is classically yolk sac → liver (major fetal site) → spleen contribution → bone marrow.</div>
+        </article>
+        <article class="qcard" id="q46">
+          <div class="qnum">Question 46</div>
+          <h3>Which hormone mediates the response to tissue hypoxia by stimulating erythropoiesis?</h3>
+          <ol class="options" type="A"><li>A. Oxygen</li><li>B. Haemoglobin</li><li>C. Erythropoietin</li><li>D. Severe anaemia</li><li>E. Thrombopoietin</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Erythropoietin</strong></div>
+          <div class="explanation"><b>Why / how:</b> The kidney senses reduced oxygen through the HIF pathway and increases EPO, which drives erythroid progenitor proliferation and red-cell production.</div>
+        </article></section><section id="s6"><h2>Haematopoiesis &amp; platelets — Q47–53</h2>
+        <article class="qcard" id="q47">
+          <div class="qnum">Question 47</div>
+          <h3>Which of the following is NOT considered a major cofactor in erythropoiesis in this exam?</h3>
+          <ol class="options" type="A"><li>A. Folate</li><li>B. Manganese</li><li>C. Cobalt</li><li>D. Zinc</li><li>E. Calcium</li></ol>
+          <div class="answer"><span>Answer</span><strong>E. Calcium</strong></div>
+          <div class="explanation"><b>Why / how:</b> Folate is essential for DNA synthesis; cobalt is part of vitamin B12 and trace elements support cellular enzymes. Calcium is not classically listed as a principal haematinic cofactor.</div>
+        </article>
+        <article class="qcard" id="q48">
+          <div class="qnum">Question 48</div>
+          <h3>What is the commonest haemoglobin in cord blood?</h3>
+          <ol class="options" type="A"><li>A. α₂β₂</li><li>B. α₂δ₂</li><li>C. α₂γ₂</li><li>D. γ₂β₂</li><li>E. γ₂γ₂</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. α₂γ₂ = HbF</strong></div>
+          <div class="explanation"><b>Why / how:</b> Fetal haemoglobin, HbF, is α₂γ₂ and predominates at birth.</div>
+        </article>
+        <article class="qcard" id="q49">
+          <div class="qnum">Question 49</div>
+          <h3>Approximately how many new blood cells are produced/replaced daily in a healthy adult?</h3>
+          <ol class="options" type="A"><li>A. 10¹¹</li><li>B. 10¹³</li><li>C. 10¹²</li><li>D. 10¹⁰</li><li>E. 10¹⁴</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. About 10¹² cells/day</strong></div>
+          <div class="explanation"><b>Why / how:</b> The marrow has enormous turnover and replaces roughly a trillion blood cells per day as an order-of-magnitude teaching figure.</div>
+        </article>
+        <article class="qcard" id="q50">
+          <div class="qnum">Question 50</div>
+          <h3>In a normal adult, what percentage of active normal haematopoiesis occurs in the bone marrow?</h3>
+          <ol class="options" type="A"><li>A. 25%</li><li>B. 50%</li><li>C. 75%</li><li>D. 90%</li><li>E. 100%</li></ol>
+          <div class="answer"><span>Answer</span><strong>E. 100% — intended answer</strong></div>
+          <div class="explanation"><b>Why / how:</b> Normal adult haematopoiesis is medullary, meaning it occurs in bone marrow. Extramedullary haematopoiesis in liver/spleen is generally pathological in adults.</div>
+        </article>
+        <article class="qcard" id="q51">
+          <div class="qnum">Question 51</div>
+          <h3>Which growth factor acts on very early/pluripotent haematopoietic stem/progenitor cells?</h3>
+          <ol class="options" type="A"><li>A. IL-1</li><li>B. TNF</li><li>C. SCF</li><li>D. IL-3</li><li>E. EPO</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. SCF — Stem Cell Factor</strong></div>
+          <div class="explanation"><b>Why / how:</b> SCF acts through c-KIT and supports survival and proliferation of early haematopoietic stem/progenitor cells.</div>
+        </article>
+        <article class="qcard" id="q52">
+          <div class="qnum">Question 52</div>
+          <h3>Weibel-Palade bodies are synthesized in which cells?</h3>
+          <ol class="options" type="A"><li>A. Megakaryocytes</li><li>B. Platelets</li><li>C. Liver cells</li><li>D. Endothelial cells</li><li>E. Pluripotent cells</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. Endothelial cells</strong></div>
+          <div class="explanation"><b>Why / how:</b> Weibel-Palade bodies are endothelial storage granules containing von Willebrand factor and P-selectin.</div>
+        </article>
+        <article class="qcard" id="q53">
+          <div class="qnum">Question 53</div>
+          <h3>What is the normal lifespan of platelets in peripheral blood?</h3>
+          <ol class="options" type="A"><li>A. 100–120 days</li><li>B. 90–100 days</li><li>C. 9–10 days</li><li>D. 1–5 days</li><li>E. 30 days</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. About 9–10 days</strong></div>
+          <div class="explanation"><b>Why / how:</b> Platelets circulate for roughly 7–10 days before senescent platelets are removed, especially by the spleen.</div>
+        </article></section><section id="s7"><h2>Figure-based: multiple myeloma — Q54–57</h2>
+        <article class="qcard" id="q54">
+          <div class="qnum">Question 54</div>
+          <h3>In the figure-based case suggestive of multiple myeloma, which renal pathology may result?</h3>
+          <ol class="options" type="A"><li>A. Amyloidosis</li><li>B. Glomerulonephritis</li><li>C. Hydronephrosis</li><li>D. Renal-cell carcinoma</li><li>E. Pyelonephritis</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. Amyloidosis — best pathological answer</strong></div>
+          <div class="explanation"><b>Why / how:</b> Myeloma light chains can cause cast nephropathy, AL amyloidosis and light-chain deposition disease. If cast nephropathy is not listed, amyloidosis is the best specific renal pathology.</div>
+        </article>
+        <article class="qcard" id="q55">
+          <div class="qnum">Question 55</div>
+          <h3>Which clinical feature is likely in multiple myeloma with osteolytic bone disease?</h3>
+          <ol class="options" type="A"><li>A. Clubbing</li><li>B. Hyperreflexia</li><li>C. Splenic rupture</li><li>D. Haemarthrosis</li><li>E. Pathological fracture</li></ol>
+          <div class="answer"><span>Answer</span><strong>E. Pathological fracture</strong></div>
+          <div class="explanation"><b>Why / how:</b> Myeloma drives osteoclast activation and suppresses normal bone formation, causing punched-out osteolytic lesions, bone pain and fractures.</div>
+        </article>
+        <article class="qcard" id="q56">
+          <div class="qnum">Question 56</div>
+          <h3>Which demographic option best fits the epidemiology of multiple myeloma among the listed choices?</h3>
+          <ol class="options" type="A"><li>A. Young White men</li><li>B. Children</li><li>C. Young Black women</li><li>D. Elderly White women</li><li>E. Elderly Black women</li></ol>
+          <div class="answer"><span>Answer</span><strong>E. Elderly Black women — best available option</strong></div>
+          <div class="explanation"><b>Why / how:</b> Multiple myeloma is primarily a disease of older adults and occurs at higher incidence in people of African ancestry. Men overall are somewhat more commonly affected than women, so the option is imperfect.</div>
+        </article>
+        <article class="qcard" id="q57">
+          <div class="qnum">Question 57</div>
+          <h3>What happens to ESR in multiple myeloma?</h3>
+          <ol class="options" type="A"><li>A. Low</li><li>B. Normal</li><li>C. Moderately low</li><li>D. High</li><li>E. Unchanged</li></ol>
+          <div class="answer"><span>Answer</span><strong>D. ESR will be high</strong></div>
+          <div class="explanation"><b>Why / how:</b> Monoclonal immunoglobulins reduce red-cell repulsion, causing rouleaux formation. Rouleaux settles faster, so ESR becomes markedly elevated.</div>
+        </article></section><section id="s8"><h2>Figure-based: Hodgkin lymphoma — Q58–61</h2>
+        <article class="qcard" id="q58">
+          <div class="qnum">Question 58</div>
+          <h3>A patient has right supraclavicular and right para-aortic lymph-node involvement. What Ann Arbor stage is this?</h3>
+          <ol class="options" type="A"><li>A. Stage I</li><li>B. Stage III</li><li>C. Stage II</li><li>D. Stage IV</li><li>E. Stage 0</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Stage III</strong></div>
+          <div class="explanation"><b>Why / how:</b> Supraclavicular nodes are above the diaphragm and para-aortic nodes are below it. Nodal disease on both sides of the diaphragm is Ann Arbor Stage III.</div>
+        </article>
+        <article class="qcard" id="q59">
+          <div class="qnum">Question 59</div>
+          <h3>What type of anaemia is most likely in a patient with Hodgkin lymphoma/chronic inflammatory malignancy?</h3>
+          <ol class="options" type="A"><li>A. Normocytic normochromic</li><li>B. Microcytic hypochromic</li><li>C. Macrocytic</li><li>D. Sideroblastic</li><li>E. Haemolytic only</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. Normocytic normochromic</strong></div>
+          <div class="explanation"><b>Why / how:</b> Anaemia of chronic inflammation is classically normocytic normochromic initially. Inflammation raises hepcidin, traps iron in macrophages and reduces iron availability and erythropoiesis.</div>
+        </article>
+        <article class="qcard" id="q60">
+          <div class="qnum">Question 60</div>
+          <h3>Which arm of immunity is characteristically impaired in Hodgkin lymphoma?</h3>
+          <ol class="options" type="A"><li>A. Humoral immunity only</li><li>B. Complement only</li><li>C. Cellular immunity</li><li>D. Innate immunity only</li><li>E. Neutrophil phagocytosis only</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Cellular immunity</strong></div>
+          <div class="explanation"><b>Why / how:</b> Hodgkin lymphoma is classically associated with impaired T-cell-mediated immunity, increasing susceptibility to certain infections.</div>
+        </article>
+        <article class="qcard" id="q61">
+          <div class="qnum">Question 61</div>
+          <h3>Which secondary malignancy is the best answer among the listed choices for a patient with Hodgkin lymphoma?</h3>
+          <ol class="options" type="A"><li>A. Diffuse large B-cell lymphoma</li><li>B. Basal-cell carcinoma</li><li>C. Osteosarcoma</li><li>D. Retinoblastoma</li><li>E. None</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. Diffuse large B-cell lymphoma — best option</strong></div>
+          <div class="explanation"><b>Why / how:</b> Hodgkin lymphoma survivors, particularly after treatment, have increased risk of secondary malignancies including non-Hodgkin lymphomas.</div>
+        </article></section><section id="s9"><h2>Figure-based: acute lymphoblastic leukaemia — Q62–66</h2>
+        <article class="qcard" id="q62">
+          <div class="qnum">Question 62</div>
+          <h3>The pictured bone-marrow aspirate is classified as which acute leukaemia subtype in the old FAB system?</h3>
+          <ol class="options" type="A"><li>A. ALL L2</li><li>B. AML M1</li><li>C. AML M2</li><li>D. AML M3</li><li>E. ALL L3</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. ALL L2</strong></div>
+          <div class="explanation"><b>Why / how:</b> Old FAB L2 morphology describes larger, more heterogeneous lymphoblasts than L1. Modern classification relies much more on immunophenotype and molecular genetics.</div>
+        </article>
+        <article class="qcard" id="q63">
+          <div class="qnum">Question 63</div>
+          <h3>In the old FAB framework, ALL L2 morphology is relatively more common in which age group?</h3>
+          <ol class="options" type="A"><li>A. Children</li><li>B. Young adults</li><li>C. Adults</li><li>D. Extremes of age</li><li>E. Neonates</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Adults</strong></div>
+          <div class="explanation"><b>Why / how:</b> ALL overall is most common in children, but the old FAB L2 morphologic pattern was relatively more associated with adults.</div>
+        </article>
+        <article class="qcard" id="q64">
+          <div class="qnum">Question 64</div>
+          <h3>What is the commonest lymphoid lineage in childhood ALL?</h3>
+          <ol class="options" type="A"><li>A. B lymphocytes</li><li>B. T lymphocytes</li><li>C. Marginal-zone cells</li><li>D. Mantle cells</li><li>E. NK cells</li></ol>
+          <div class="answer"><span>Answer</span><strong>A. B lymphocytes</strong></div>
+          <div class="explanation"><b>Why / how:</b> Most childhood ALL is B-lymphoblastic leukaemia/lymphoma.</div>
+        </article>
+        <article class="qcard" id="q65">
+          <div class="qnum">Question 65</div>
+          <h3>What was the historical prognosis associated with FAB L2 morphology?</h3>
+          <ol class="options" type="A"><li>A. Good</li><li>B. Very good</li><li>C. Bad</li><li>D. Excellent</li><li>E. Always fatal</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Bad — historical FAB answer</strong></div>
+          <div class="explanation"><b>Why / how:</b> Historically, L2 morphology was associated with worse prognosis than L1. Modern prognosis depends more on genetics, age, white-cell count, measurable residual disease and treatment response.</div>
+        </article>
+        <article class="qcard" id="q66">
+          <div class="qnum">Question 66</div>
+          <h3>Which is an important sanctuary/secondary site in ALL?</h3>
+          <ol class="options" type="A"><li>A. Skin</li><li>B. Kidney</li><li>C. Lung</li><li>D. Liver</li><li>E. Brain/CNS</li></ol>
+          <div class="answer"><span>Answer</span><strong>E. Brain/CNS</strong></div>
+          <div class="explanation"><b>Why / how:</b> The CNS is a major sanctuary site because systemic chemotherapy may penetrate it incompletely. This is why CNS-directed prophylaxis is a standard part of ALL therapy.</div>
+        </article></section><section id="s10"><h2>Pregnant woman with marked thrombocytosis — Q67–69</h2>
+        <article class="qcard" id="q67">
+          <div class="qnum">Question 67</div>
+          <h3>The laboratory data show a very high platelet count in a 23-year-old pregnant woman. What is the most likely haematological abnormality among the listed options?</h3>
+          <ol class="options" type="A"><li>A. Hypochromic normocytic anaemia</li><li>B. Thrombophilia</li><li>C. Spherocytosis</li><li>D. Megaloblastic anaemia</li><li>E. Thrombocytopenia</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Thrombophilia — intended exam answer</strong></div>
+          <div class="explanation"><b>Why / how:</b> Strictly, the laboratory abnormality is thrombocytosis, not &#x27;thrombophilia&#x27;. Thrombophilia means a tendency to thrombosis. The option is poorly worded, but B is clearly the intended answer.</div>
+        </article>
+        <article class="qcard" id="q68">
+          <div class="qnum">Question 68</div>
+          <h3>This patient with marked thrombocytosis may present with which complication?</h3>
+          <ol class="options" type="A"><li>A. DIC</li><li>B. Thrombosis</li><li>C. Bleeding diathesis only</li><li>D. Epistaxis only</li><li>E. Haemarthrosis</li></ol>
+          <div class="answer"><span>Answer</span><strong>B. Thrombosis</strong></div>
+          <div class="explanation"><b>Why / how:</b> Marked thrombocytosis can increase arterial, venous and microvascular thrombosis risk. Extremely high counts can paradoxically also cause bleeding through acquired von Willebrand dysfunction.</div>
+        </article>
+        <article class="qcard" id="q69">
+          <div class="qnum">Question 69</div>
+          <h3>Which test is the most appropriate from the listed traditional options for assessing the platelet-related primary haemostatic problem?</h3>
+          <ol class="options" type="A"><li>A. PTT</li><li>B. PT</li><li>C. Bleeding time</li><li>D. Factor assay</li><li>E. D-dimer</li></ol>
+          <div class="answer"><span>Answer</span><strong>C. Bleeding time — intended older exam answer</strong></div>
+          <div class="explanation"><b>Why / how:</b> PT and aPTT mainly assess coagulation-factor pathways. Bleeding time was historically used to assess primary haemostasis/platelet function, although modern practice uses more specific platelet and von Willebrand testing.</div>
+        </article></section>
+<footer>Prepared as a clean study version of the uploaded Block 3.7 MCQ section.</footer>
+</main>
 </body>
 </html>
